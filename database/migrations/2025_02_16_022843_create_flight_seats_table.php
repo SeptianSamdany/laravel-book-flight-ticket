@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('column');
             $table->enum('class_type', ['economy', 'business']);
             $table->boolean('is_available')->default(false);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

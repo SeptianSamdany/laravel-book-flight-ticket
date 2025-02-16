@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('flight_id')->constrained();
             $table->foreignId('airport_id')->constrained();
             $table->dateTime('time');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('code')->unique();
             $table->string('name');
-            $table->string('logo_url')->nullable();
+            $table->string('logo')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
